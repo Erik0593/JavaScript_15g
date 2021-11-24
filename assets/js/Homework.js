@@ -57,11 +57,13 @@ switch(day){
  * Imprimir en consola cual es el mayor de los 2
  */
 
- const number = parseInt(prompt('Introduce el primer valor'))
- const number2 = parseInt(prompt('Introduce el segundo valor'))
+ const number2 = parseInt(prompt('Introduce el primer valor'))
+ const number3 = parseInt(prompt('Introduce el segundo valor'))
 
- if(number > number2){
-    console.log('El numero mayor es: ',number) 
- } else{
-    console.log('El numero menos es: ', number2)
+ if(number2 > number3){
+    console.log('El numero mayor es: ',number2) 
+    console.log('El numero menor es: ', number3)
+ } else {
+    console.log('El numero mayor es: ',number3) 
+    console.log('El numero menor es: ', number2)
  }
