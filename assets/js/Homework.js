@@ -26,10 +26,10 @@ if(!isNaN(valuea) && !isNaN(valueb) && !isNaN(valuec)){
 }
 
 
-const weather = prompt('¿Que tipo de clima esta en tu ciudad?')
+const neweather = prompt('¿Que tipo de clima esta en tu ciudad? \n 1. Soleado \n 2. Lluvioso \n 3. Nevando \n 4. Nublado')
 const degree = parseInt(prompt('¿A que temperatura esta en la ciudad?'))
+const weather = neweather.toLowerCase()
 switch(weather){
-    case "Lluvioso":
     case "lluvioso":
     if (!isNaN (degree)){
         const faren = (degree*1.8)+32
@@ -39,7 +39,6 @@ switch(weather){
         console.error('No estas metiendo un numero')
     }
     break
-    case "Soleado":
     case "soleado":
     if (!isNaN(degree)){
         const faren = (degree*1.8)+32
@@ -49,7 +48,6 @@ switch(weather){
         console.error('No estas metiendo un numero')
     }
     break
-    case "Nevando":
     case "nevando":
     if (!isNaN(degree)){
         const faren = (degree*1.8)+32
@@ -59,7 +57,6 @@ switch(weather){
         console.log('No estas metiendo un numero')
     }
     break
-    case "Nublado":
     case "nublado":
     if (!isNaN(degree)){
         const faren = (degree*1.8)+32
