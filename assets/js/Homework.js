@@ -1,3 +1,4 @@
+//Ejercicio 1
 const grado = parseInt(prompt('A cuantos grados estas actualmente?'))
 
 if (!isNaN(grado)){
@@ -7,6 +8,8 @@ else{
     console.log('No estas metiendo un numero')
 }
 
+
+//Ejercicio 2
 const valuea = parseInt(prompt('Dame el primer valor'))
 const valueb = parseInt(prompt('Dame el segundo valor'))
 const valuec = parseInt(prompt('Dame el tercer valor'))
@@ -25,7 +28,7 @@ if(!isNaN(valuea) && !isNaN(valueb) && !isNaN(valuec)){
     console.error('Algunos valores no son numericos')
 }
 
-
+//Ejercicio 3 (Tarea)
 const neweather = prompt('¿Que tipo de clima esta en tu ciudad? \n 1. Soleado \n 2. Lluvioso \n 3. Nevando \n 4. Nublado')
 const degree = parseInt(prompt('¿A que temperatura esta en la ciudad?'))
 const weather = neweather.toLowerCase()
