@@ -1,69 +1,74 @@
-/**
- * 
- * Pedir al usuario por prompt un numero entre 1 y 100
- * verificar si es un par o impar
- * imprimir en resultado en consola
- * Máximo de lineas para este ejercicio, 2 lineas de código
- * Hint: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
- */
+const grado = parseInt(prompt('A cuantos grados estas actualmente?'))
 
- const number = parseInt(prompt('Introduce un valor del 1 al 100'))
- const valor = (number%2) ? "impar" : "par"
- console.log(valor)
+if (!isNaN(grado)){
+    console.log(`${grado} °C = ${(grado*1.8)+32} °F`)
+}
+else{
+    console.log('No estas metiendo un numero')
+}
 
+const valuea = parseInt(prompt('Dame el primer valor'))
+const valueb = parseInt(prompt('Dame el segundo valor'))
+const valuec = parseInt(prompt('Dame el tercer valor'))
 
-/**
- * 
- * Pedir al usuario el dia de la semana 
- * p.ej. lunes, martes, ...
- * Imprimir en consola el número del dia de la semana equivalente
- * es decir:
- * domingo -> 1, lunes -> 2, martes -> 3, etc...
- */
-
-let day = prompt('Introduce el dia')
-switch(day){
-    case 'domingo':
-        console.log('Dia de la semana 1')
-        break
-    case 'lunes':
-        console.log('Dia de la semana 2')
-        break
-    case 'martes':
-        console.log('Dia de la semana 3')
-        break
-    case 'miercoles':
-        console.log('Dia de la semana 4')
-        break
-    case 'jueves':
-        console.log('Dia de la semana 5')
-        break
-    case 'viernes':
-        console.log('Dia de la semana 6')
-        break
-    case 'sabado':
-        console.log('Dia de la semana 7')
-        break
-    default:
-        console.error('No has escrito ningun dia')
-        break
+if(!isNaN(valuea) && !isNaN(valueb) && !isNaN(valuec)){
+    if(valuea === valueb && valuea === valuec){
+        console.log('Los numeros son iguales')
+    } else if (valuea > valueb && valuea > valuec){
+        console.log(`El numero ${valuea} es el mayor`)
+    } else if (valueb > valuea && valueb > valuec){
+        console.log(`El numero ${valueb} es el mayor`)
+    } else{
+        console.log(`El numero ${valuec} es el mayor`)
+    }
+} else {
+    console.error('Algunos valores no son numericos')
 }
 
 
-/**
- * 
- * Pedir al usuario 2 numeros 
- * Imprimir en consola cual es el menor de los 2
- * Imprimir en consola cual es el mayor de los 2
- */
-
- const number2 = parseInt(prompt('Introduce el primer valor'))
- const number3 = parseInt(prompt('Introduce el segundo valor'))
-
- if(number2 > number3){
-    console.log('El numero mayor es: ',number2) 
-    console.log('El numero menor es: ', number3)
- } else {
-    console.log('El numero mayor es: ',number3) 
-    console.log('El numero menor es: ', number2)
- }
+const weather = prompt('¿Que tipo de clima esta en tu ciudad?')
+const degree = parseInt(prompt('¿A que temperatura esta en la ciudad?'))
+switch(weather){
+    case "Lluvioso":
+    case "lluvioso":
+    if (!isNaN (degree)){
+        const faren = (degree*1.8)+32
+        console.log(`En tu ciudad, el clima esta "${weather}" con una temperatura de ${faren}°F`)
+    }
+    else{
+        console.error('No estas metiendo un numero')
+    }
+    break
+    case "Soleado":
+    case "soleado":
+    if (!isNaN(degree)){
+        const faren = (degree*1.8)+32
+        console.log(`En tu ciudad, el clima esta "${weather}" con una temperatura de ${faren}°F`)
+    }
+    else{
+        console.error('No estas metiendo un numero')
+    }
+    break
+    case "Nevando":
+    case "nevando":
+    if (!isNaN(degree)){
+        const faren = (degree*1.8)+32
+        console.log(`En tu ciudad, el clima esta "${weather}" con una temperatura de ${faren}°F`)
+    }
+    else{
+        console.log('No estas metiendo un numero')
+    }
+    break
+    case "Nublado":
+    case "nublado":
+    if (!isNaN(degree)){
+        const faren = (degree*1.8)+32
+        console.log(`En tu ciudad, el clima esta "${weather}" con una temperatura de ${faren}°F`)
+    }
+    else{
+        console.log('No estas metiendo un numero')
+    }
+    break
+    default:
+        console.error('Clima No valido')
+}
