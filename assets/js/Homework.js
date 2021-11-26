@@ -21,28 +21,28 @@
  * domingo -> 1, lunes -> 2, martes -> 3, etc...
  */
 
-let day = prompt('Introduce el dia')
+let day = prompt('Introduce el dia').toLowerCase();
 switch(day){
     case 'domingo':
-        console.log('Dia de la semana 1')
+        console.log(`${day} Es el dia de la semana 1`)
         break
     case 'lunes':
-        console.log('Dia de la semana 2')
+        console.log(`${day} Es el dia de la semana 2`)
         break
     case 'martes':
-        console.log('Dia de la semana 3')
+        console.log(`${day} Es el dia de la semana 3`)
         break
     case 'miercoles':
-        console.log('Dia de la semana 4')
+        console.log(`${day} Es el dia de la semana 4`)
         break
     case 'jueves':
-        console.log('Dia de la semana 5')
+        console.log(`${day} Es el dia de la semana 5`)
         break
     case 'viernes':
-        console.log('Dia de la semana 6')
+        console.log(`${day} Es el dia de la semana 6`)
         break
     case 'sabado':
-        console.log('Dia de la semana 7')
+        console.log(`${day} Es el dia de la semana 7`)
         break
     default:
         console.error('No has escrito ningun dia')
