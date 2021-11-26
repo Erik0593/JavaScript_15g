@@ -29,9 +29,8 @@ if(!isNaN(valuea) && !isNaN(valueb) && !isNaN(valuec)){
 }
 
 //Ejercicio 3 (Tarea)
-const neweather = prompt('¿Que tipo de clima esta en tu ciudad? \n 1. Soleado \n 2. Lluvioso \n 3. Nevando \n 4. Nublado')
+const weather = prompt('¿Que tipo de clima esta en tu ciudad? \n 1. Soleado \n 2. Lluvioso \n 3. Nevando \n 4. Nublado').toLowerCase();
 const degree = parseInt(prompt('¿A que temperatura esta en la ciudad?'))
-const weather = neweather.toLowerCase()
 switch(weather){
     case "lluvioso":
     if (!isNaN (degree)){
