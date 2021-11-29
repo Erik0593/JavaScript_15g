@@ -5,16 +5,14 @@
 //  * -> 4
 //  * -> 100
 // */
-
 let number = 0
 
-if(!isNaN ){
-    
+if(i=0 i>=100; i++){
+    let number2 = number%2
+    console.log(`${number2}`)
 }else {
     console.log('No hay nada de datos')
 }
-
-
 
 /**
  * Ejercicio 2
