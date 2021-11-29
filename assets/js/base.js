@@ -1,6 +1,6 @@
 //Ejercicio 1
 let word = prompt('Favor de poner la palabra a transformar').toLowerCase()
-alert(word[0].toUpperCase() + word.slice(1,word.length))
+alert(word[0].toUpperCase() + word.slice(1))
 
 //Ejercicio 2
 let sentence = prompt("Por favor poner una palabra con espacios").trim().toLowerCase()
