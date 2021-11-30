@@ -38,15 +38,9 @@ for(i = word.length - 1; i >= 0 ; i--){
 //  * hint: https://www.w3schools.com/jsref/jsref_replace.asp
 //  */
 
-let text = prompt('Agrega dos palabras')
-
-if(isNaN(text)){
-  let text2 = text.replace(" ","-")
-    console.log(text2)
-} else {
-    console.log('Agrega un texto')
-}
-
+let text = 'Hola Koders'
+let text2 = text.replace(" ","-")
+console.log(text2)
 
 // /**
 //  * Ejercicio 4
