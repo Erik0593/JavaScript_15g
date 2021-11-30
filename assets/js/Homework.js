@@ -5,42 +5,58 @@
 //  * -> 4
 //  * -> 100
 // */
-let number = 0
 
-if(i=0 i>=100; i++){
-    let number2 = number%2
-    console.log(`${number2}`)
-}else {
-    console.log('No hay nada de datos')
+for (i = 0; i <= 100; i++){
+    if(i%2 == 0){
+        console.log(i)
+    }
 }
 
-/**
- * Ejercicio 2
- * Pedir al usuario un string
- * Invertir el orden e imprimir en consola
- * Entrada: "reverse"
- * Salida: -> esrever
- * hint: https://www.w3schools.com/jsref/jsref_length_string.asp
-*/
+// /**
+//  * Ejercicio 2
+//  * Pedir al usuario un string
+//  * Invertir el orden e imprimir en consola
+//  * Entrada: "reverse"
+//  * Salida: -> esrever
+//  * hint: https://www.w3schools.com/jsref/jsref_length_string.asp
+// */
+
+let word = prompt('Agrega una palabra')
+let wordreverse = ''
+
+for(i = word.length - 1; i >= 0 ; i--){
+          wordreverse = wordreverse + word[i]
+      } 
+      console.log(wordreverse)
+
+// /**
+//  * Ejercicio 3 
+//  * Declarar un string de al menos 2 palabras
+//  * Imprimir en consola el string separado por guiones en cada palabra
+//  * "hola koders"
+//  * "hola-koders"
+//  * hint: https://www.w3schools.com/jsref/jsref_replace.asp
+//  */
+
+let text = prompt('Agrega dos palabras')
+
+if(isNaN(text)){
+  let text2 = text.replace(" ","-")
+    console.log(text2)
+} else {
+    console.log('Agrega un texto')
+}
 
 
-/**
- * Ejercicio 3 
- * Declarar un string de al menos 2 palabras
- * Imprimir en consola el string separado por guiones en cada palabra
- * "hola koders"
- * "hola-koders"
- * hint: https://www.w3schools.com/jsref/jsref_replace.asp
- */
+// /**
+//  * Ejercicio 4
+//  * Declarar un string con un correo electrónico
+//  * Enmascarar con "*" el bloque del usuario
+//  * "jorgec@kodemia.mx"
+//  * "*****@kodemia.mx"
+//  * 
+//  * hint: https://www.w3schools.com/jsref/jsref_slice_string.asp
+//  * hint: https://www.w3schools.com/jsref/jsref_indexof.asp
 
+let email = prompt('Escribe tu correo')
 
-/**
- * Ejercicio 4
- * Declarar un string con un correo electrónico
- * Enmascarar con "*" el bloque del usuario
- * "jorgec@kodemia.mx"
- * "*****@kodemia.mx"
- * 
- * hint: https://www.w3schools.com/jsref/jsref_slice_string.asp
- * hint: https://www.w3schools.com/jsref/jsref_indexof.asp
- */
