@@ -91,3 +91,7 @@
 // }
 
 
+let email = 'erik.gutierrez@kodemia.mx'
+let text = email.slice(14)
+
+console.log(text)

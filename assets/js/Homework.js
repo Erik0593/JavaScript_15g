@@ -52,5 +52,8 @@ console.log(text2)
 //  * hint: https://www.w3schools.com/jsref/jsref_slice_string.asp
 //  * hint: https://www.w3schools.com/jsref/jsref_indexof.asp
 
-let email = prompt('Escribe tu correo')
+let email = 'erik.gutierrez@kodemia.mx'
+let text = email.slice(14)
+
+console.log(text)
 
