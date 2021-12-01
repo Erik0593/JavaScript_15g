@@ -36,13 +36,3 @@
 // let word = prompt('Ingresa una palabra')
 // let resultado = reverse(word)
 // console.log(resultado)
-
-function sumaTotal(){
-  let result = 0
-  for (let i=1; i<=n; i++){
-      result += n
-      console.log(result)
-  }
-}
-
-let n = parseInt(prompt('Dame un valor del 1 al 100'))
