@@ -17,7 +17,8 @@ console.log(mostBigger([1,4,3,2,5]))
 //obtener el valor mas bajo de un array
 
 //empezamos con la estrctura de un arrow
-// const "nombre de la funcion" = ("Aqui va el array o valor que nosotros le demos afuera de este arrow") => {
+// const "nombre de la funcion" = ("Aqui va el array o 
+//valor que nosotros le demos afuera de este arrow") => {
 //      
 //      Aqui va todo el codigo de la arrow-function 
 //
