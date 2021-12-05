@@ -11,4 +11,16 @@
 // const fullname = ['jorge','luis', 'camarillo', 'cristobal']
 // ->'jlcc'
 
-const getFullName = arr => {return arr.reduce((acc,cv) => `${acc}${cv.slice(0,1)}`,'')}
+// const getFullName = arr => {return arr.reduce((acc,cv) => `${acc}${cv.slice(0,1)}`,'')}
+
+
+let additionMultiArr = (  [	[1,2,3] , [1,3,2] , [3,2,1] ] )
+let res = []
+additionMultiArr.map(item => {
+    res.push(item.reduce((acc,cv) => acc + cv))
+})
+console.log(res)
+
+let sumaTotal = res.reduce((acc, cv) => acc+cv)
+
+console.log(`Suma de todos los arrays: ${sumaTotal}`)
