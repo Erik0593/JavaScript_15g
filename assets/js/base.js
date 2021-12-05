@@ -1,6 +1,6 @@
 // [].reduce( (acc,value, index, array) => {}) -> ''
 
-//const fullname = ['jorge','luis', 'camarillo', 'cristobal']
+// const fullname = ['jorge','luis', 'camarillo', 'cristobal']
 
 // let fullNameStr = ''
 // fullNameStr = fullname.reduce( ( acc, cv) => {
