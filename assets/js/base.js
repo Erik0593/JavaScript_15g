@@ -114,29 +114,29 @@ Salida: -> [modelo, marca, color, version, origen]
 // console.log(filterStringObjetc(objOnlyString))
 
 // Array de objetos
-let koders =  [
-    {
-        name: 'jorge luis',
-        lastName: 'Camarillo',
-        age: 30,
-        generation: 6,
-        modulos: ['js','node js', 'cloud'],
-    },
-    {
-        name: 'Erik',
-        lastName: 'Gutierrez',
-        age: 20,
-        generation: 15,
-        modulos: ['js'],
-    },
-    {
-        name: 'Sara',
-        lastName: 'Reveles',
-        age: 24,
-        generation: 12,
-        modulos: ['js'],
-    }
-]
+// let koders =  [
+//     {
+//         name: 'jorge luis',
+//         lastName: 'Camarillo',
+//         age: 30,
+//         generation: 6,
+//         modulos: ['js','node js', 'cloud'],
+//     },
+//     {
+//         name: 'Erik',
+//         lastName: 'Gutierrez',
+//         age: 20,
+//         generation: 15,
+//         modulos: ['js'],
+//     },
+//     {
+//         name: 'Sara',
+//         lastName: 'Reveles',
+//         age: 24,
+//         generation: 12,
+//         modulos: ['js'],
+//     }
+// ]
 
 // koders.forEach((element, index, array) => {
 //     // console.log(element.lastName)
@@ -171,11 +171,11 @@ console.log(`La suma de las edades es ${totalAge}`)
 //funcion con foreach
 //acceder el valor de la edad
 // return la suma
-let suma = 0
-koders.forEach((element, index) => {
-	console.log(element)
-	console.log(index)
-	//console.log(`${element.age} total de años`)
-	return suma += element.age
-});
-console.log(suma)
+// let suma = 0
+// koders.forEach((element, index) => {
+// 	console.log(element)
+// 	console.log(index)
+// 	//console.log(`${element.age} total de años`)
+// 	return suma += element.age
+// });
+// console.log(suma)
