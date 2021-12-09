@@ -22,6 +22,7 @@
 
 
 //agregar el valor de 'Go' dentro del array Languages 
+console.log(koder)
 koder.languages.push("Go")
 console.log(koder)
 
@@ -97,8 +98,17 @@ console.log(koderclon)
  * 
  * Se tiene que realizar 2 soluciones, 1 con Object.entries() y otra con .map()
  */
+
+
+//solucion Object.entries()
 const makePairs = (object) => {
-    
+    let arr = Object.entries(object)
+    return arr
+}
+
+//Solucion .map
+const makePairs = (object) => {
+
 }
 
 

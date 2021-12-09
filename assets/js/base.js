@@ -15,9 +15,13 @@
  */
 
 
+//solucion Object.entries()
+// const makePairs = (object) => {
+//     let arr = Object.entries(object)
+//     return arr
+// }
 
+//Solucion .map
 const makePairs = (object) => {
     
 }
-
-
