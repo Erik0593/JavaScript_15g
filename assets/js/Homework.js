@@ -127,6 +127,5 @@ const makePairs = (object) => {
  * @hint https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
  */
 
-const splitString = (str) => {
-
-}
+ const splitstring = (str) => [...str]
+ console.log(splitstring('hola mundo'))
