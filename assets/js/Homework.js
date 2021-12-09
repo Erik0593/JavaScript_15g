@@ -22,7 +22,6 @@
 
 
 //agregar el valor de 'Go' dentro del array Languages 
-console.log(koder)
 koder.languages.push("Go")
 console.log(koder)
 
