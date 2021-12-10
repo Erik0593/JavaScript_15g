@@ -1,128 +1,106 @@
-// console.log(this)
-// console.log(this.alert)
-
-let koder = {
-    name:"jorge",
-    lastName:"Camarillo",
-    age: 30,
-    average: [10, 10, 10, 8, 9],
-    peso: 60,
-    altura: 1.70,
-    // getFullName: function () {
-    //     console.log(this)
-    //     return `${ this.name } ${ this.lastName } ${this.age}`
-    // }
-}
-
-koder.getFullName = function () {
-    // console.log(this)
-    return `${ this.name } ${ this.lastName } ${this.age}`
-}
-
-// console.log(koder.getFullName())
-
-koder.getAverage = function () {
-    // let sumatotal = 0
-    // let promedio = 0
-    // this.average.forEach(element => {
-    //     sumatotal += element
-    //     promedio = sumatotal/this.average.length
-    // })
-    // console.log(promedio)
-    let sum = this.average.reduce((acc,cv ) => acc += cv, 0)
-    let total = this.average.length
-    let av = sum / total
-    return av
-}
-
-koder.setAverage = function() {
-    this.totalAvarage = this.getAverage 
-}
-koder.setAverage()
-console.log(koder)
-
-// Agregar un metodo para calcular el IMC
-koder.peso = 60
-koder.altura = 1.7
-
-koder.setGetIMC = function () {
-    this.indicemc = this.peso/this.altura * this.altura
-}
-koder.setGetIMC()
-console.log(indicemc)
-
-// Agregar un metodo para Agregar un nuevo promedio
-koder.setNewAve = function (element) {
-    this.average.push(element)
-}
-koder.setNewAve(10)
-
-// Agregar un metodo para agregar una nueva propiedad 
-koder.addNewProperty = function () {
-    
-}
-
-//ejercicios clase mentor
-
-let koder = {
-    name:"jorge",
-    lastName:"Camarillo",
-    average: [10, 10, 10, 8, 9],
-    age: 30,
-
-    getAge: function () {
-        return this.age
-    },
-
-    get ageKoder() {
-        return this.age
-    },
-
-    set ageKoder(age) {
-        this.age = age
-    },
-
-    get fullName() {
-        return `${ this.name } ${ this.lastName }`
-    },
-
-    set fullName(objFullName) {
-        this.name = objFullName[0]
-        this.lastName = objFullName[1]
-    },
-
-
-}
-
-
-// Metodos
-console.log( koder.getAge() )
-
-// getters
-console.log('Edad inicial: ', koder.ageKoder)
-console.log('Nombre completo: ', koder.fullName)
-
-// setters
-koder.ageKoder = 47
-koder.fullName = ['jorge luis', 'camarillo']
-
-// getter y setter de 
 /**
+ * Selecionar elementos
  * 
- * 1. getter average
- * 2. getter, setter IMC 
- * 3. setter Score
- * 4. setter newProperty
- * 
- * 
+ * 1. Selecionar por ID
+ */
+
+//  1. Selecionar por ID
+document.getElementById('head__title') 
+document.getElementsByTagName('li')
+document.getElementsByClassName('link__menu')
+
+document.querySelector('#head__title')
+document.querySelector('li')
+document.querySelector('.link__menu')
+document.querySelectorAll('.link__menu')
+// document.querySelectorAll('')
+
+/**
+ * Obtener atributos
+ * Setear atributos
+ */
+
+// get
+let title = document.querySelector('#head__title').getAttribute('data-title')
+let level = document.querySelector('#head__title').getAttribute('data-level')
+
+// set
+document.querySelector('#head__title').setAttribute('data-custom','random')
+// reemplazando clases 
+// document.querySelector('#head__title').setAttribute('class','trees cuatro')
+
+// Agregar clases
+// document.querySelector('#head__title').classList.add('clase3')
+// remover clases
+// document.querySelector('#head__title').classList.remove('clase2')
+
+// comprobar si existe un atributo
+document.querySelector('#head__title').hasAttribute('class')
+
+
+// comprobar si el titulo tiene class
+/**
+ * Si si, comprobar 
+ * ---si tiene la clase "clase1 clase2"
+ * ----- Agregar la "clase 3"
+ * ---sino 
+ * ----- Agregar la clase "custom"
+ */
+
+let elemenTitle = document.querySelector('#head__title')
+if( elemenTitle.hasAttribute('class') ) {
+    if( elemenTitle.getAttribute('class') === 'clase1 clase2' ) {
+        elemenTitle.classList.add('clase3')
+    } else {
+        elemenTitle.classList.add('custom')
+    }
+}
+// createElement('tag')
+// textContent
+// appendChild
+
+let ulElement = document.createElement('ul')
+// <ul></ul>
+
+let liFirst = document.createElement('li')
+// <li></li>
+liFirst.textContent = 'item 1'
+// <li>item 1</li>
+ulElement.appendChild(liFirst)
+// <ul> <li>item 1</li> </ul>
+
+let liSecond = document.createElement('li')
+// <li></li>
+liSecond.textContent = 'item 2'
+// <li>item 2</li>
+ulElement.appendChild(liSecond)
+// <ul> <li>item 1</li> <li>item 2</li> </ul>
+
+document.getElementsByTagName('body')[0].appendChild(ulElement)
+// body -> <ul> <li>item 1</li> <li>item 2</li> </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+// data attributes
+// propiedades personalizadas
+
+
+
+/**
+ * Seleccionar padres e hijos (traversing)
  */
 
 
 /**
- * Estudiar DOM 
- * CSS y HTML
+ * Manipular elementos del DOM
  */
-
-//getter average
-
-console.log('El promedio es: ', koder.average)
