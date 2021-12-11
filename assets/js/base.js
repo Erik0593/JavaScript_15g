@@ -5,14 +5,14 @@
  */
 
 //  1. Selecionar por ID
-document.getElementById('head__title') 
-document.getElementsByTagName('li')
-document.getElementsByClassName('link__menu')
+// document.getElementById('head__title') 
+// document.getElementsByTagName('li')
+// document.getElementsByClassName('link__menu')
 
-document.querySelector('#head__title')
-document.querySelector('li')
-document.querySelector('.link__menu')
-document.querySelectorAll('.link__menu')
+// document.querySelector('#head__title')
+// document.querySelector('li')
+// document.querySelector('.link__menu')
+// document.querySelectorAll('.link__menu')
 // document.querySelectorAll('')
 
 /**
@@ -47,15 +47,15 @@ document.querySelectorAll('.link__menu')
  * ----- Agregar la clase "custom"
  */
 
-document.querySelector('#head__title').getAttribute('class')
-let result = document.querySelector('#head__title').hasAttribute('clase1 clase2')
+// document.querySelector('#head__title').getAttribute('class')
+// let result = document.querySelector('#head__title').hasAttribute('clase1 clase2')
 
 
-if(result === true){
-    document.querySelector('#head__title').classList.add('clase3')
-}else {
-    document.querySelector('#head__title').classList.add('costum')
-}
+// if(result === true){
+//     document.querySelector('#head__title').classList.add('clase3')
+// }else {
+//     document.querySelector('#head__title').classList.add('costum')
+// }
 
 
 //solucion mentor
@@ -101,21 +101,21 @@ if(result === true){
 //         <li class="item__menu">About Us</li>
 //     </ul> -->
 
-let ulElement = document.createElement('ul')
-ulElement.setAttribute('id','menu')
-ulElement.setAttribute('class','menu')
+// let ulElement = document.createElement('ul')
+// ulElement.setAttribute('id','menu')
+// ulElement.setAttribute('class','menu')
 
-let liFirst = document.createElement('li')
-        liFirst.textContent = 'Home'
-        ulElement.appendChild(liFirst).setAttribute('class','item__menu')
-let liSecond = document.createElement('li')
-        liSecond.textContent = 'Products'
-        ulElement.appendChild(liSecond).setAttribute('class','item__menu')
-let liThird = document.createElement('li')     
-        liThird.textContent = 'About Us'
-        ulElement.appendChild(liThird).setAttribute('class','item__menu')  
+// let liFirst = document.createElement('li')
+//         liFirst.textContent = 'Home'
+//         ulElement.appendChild(liFirst).setAttribute('class','item__menu')
+// let liSecond = document.createElement('li')
+//         liSecond.textContent = 'Products'
+//         ulElement.appendChild(liSecond).setAttribute('class','item__menu')
+// let liThird = document.createElement('li')     
+//         liThird.textContent = 'About Us'
+//         ulElement.appendChild(liThird).setAttribute('class','item__menu')  
 
-document.getElementsByTagName('body')[0].appendChild(ulElement)
+// document.getElementsByTagName('body')[0].appendChild(ulElement)
 
 
 
@@ -132,3 +132,28 @@ document.getElementsByTagName('body')[0].appendChild(ulElement)
 /**
  * Manipular elementos del DOM
  */
+
+
+let ulElement = document.createElement('ul')
+ ulElement.setAttribute('id','menu')
+ ulElement.setAttribute('data-menu','booking')
+
+
+let liFirst = document.createElement('li')
+ liFirst.textContent = 'Hoteles'
+ ulElement.appendChild(liFirst).setAttribute('class','menu__booking__item')
+let liSecond = document.createElement('li')
+ liSecond.textContent = 'Ofertas'
+ ulElement.appendChild(liSecond).setAttribute('class','menu__booking__item')
+let liThird = document.createElement('li')     
+ liThird.textContent = 'Viajes'
+ ulElement.appendChild(liThird).setAttribute('class','menu__booking__item')
+let liFourth = document.createElement('li')
+ liFourth.textContent = 'Ayuda'
+ ulElement.appendChild(liFourth).setAttribute('class','menu__booking__item')
+let liFifth = document.createElement('li')     
+ liFifth.textContent = 'Cancelaciones'
+ ulElement.appendChild(liFifth).setAttribute('class','menu__booking__item') 
+
+
+document.getElementsByTagName('body')[0].appendChild(ulElement)
