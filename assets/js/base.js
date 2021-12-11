@@ -60,11 +60,21 @@ let koders = [
 
 const filterKoder = () => {
         // filtrar koders    
-    let koderSearch = document.querySelector('#name__koder').value
+    let koderSearch = document.querySelector('#name__koder').value.toLowerCase()
+
     let koderFiltered = koders.filter( (koder) => {
-        if(koders.includes(koderSearch)){
+        if(koder.name.toLowerCase().includes(koderSearch)){
             return koder
         }
     })
+    let lista = ''
+    koderFiltered.forEach( (value) => {
+        lista += `
+        <strong>${value.name}</strong>
+        <span>${value.age}</span>
+        <span>${value.city}</span>
+        `
+    })
 }
 
+document.querySelector('#listKoders').innerHTML = lista
