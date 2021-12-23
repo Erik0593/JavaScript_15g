@@ -39,27 +39,30 @@
     </ul> -->
 
     <form action="" class="form__filter">
-        <select name="" id="orderFilter" onchange="filterKoders()">
+
+        <select name="" id="orderFilter">
             <option value="desc">Descendente</option>
             <option value="asc">Ascendente</option>
         </select>
 
-        <select name="" id="filterby" onchange="changeFilter()">
+        <select name="" id="filterby">
             <option value="name">Nombre</option>
             <option value="age">Edad</option>
             <option value="city">Ciudad</option>
         </select>
         <input type="text" id="name__koder" 
-        placeholder="Coloca un nombre" 
-        onkeyup="filterKoder()">
+        placeholder="Coloca un nombre">
         <ul id="listKoders">
             
         </ul>
     </form>
+
+    <button id="button__eventListener">Event Listener click</button>
+
+
     
 
-    <script src="/assets/js/filterArr.js"></script>
-    <!-- <script src="/assets/js/is_largest.js"></script> -->
+    <script src="/assets/js/eventlistener.js"></script>
 
 </body>
 </html>
