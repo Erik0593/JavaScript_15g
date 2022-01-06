@@ -4,6 +4,9 @@
  * hint: https://www.w3schools.com/jsref/jsref_join.asp
  */
 
+const reverse = str => str.split('').reverse()
+
+reverse('Hello world')
 
 
 /**
@@ -13,7 +16,11 @@
  * hint: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse
  */
 
-
+const palindromo = (pal = 'Anita lava la tina') => {
+    let normal = pal.normalize('Nfd').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/([^\w]+|\s+)/g, '')
+    let wr = normal.split('').reverse().join('')
+    return normal == wr ? true : false
+}
 
 /**
  * Escribir un arrow function que tome como parametro 2 arrays, 
@@ -26,14 +33,14 @@
  * 
 */
 
-const array1 = [1,2,3,4]
-const array2 = [1,2]
-const array3 = array1.concat(array2)
-    console.log(array3)
-
-    let total = 0
-    array3.forEach(function(i){total += i;})
-    console.log(total)
+const arrayReduce = (arrOne, arrTwo) => {
+    let newArr = arrOne.concat(arrTwo)
+    let arrAdd = 0
+    newArr.forEach( (item ) => {
+        arrAdd += item
+    })
+    return arrAdd
+}
 
 /**
  * Escribir una función que tome como parametro 2 arrays, y devuelva un array 
