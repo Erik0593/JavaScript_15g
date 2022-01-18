@@ -378,6 +378,9 @@ const sumarSalarios = (obj) => {
     return suma
 }
 
+//Object.keys accedemos a las propiedades del objeto 
+//obj[empleados(o el nombre que queramos)] obtenemos el valor de la propiedad
+
 console.log(sumarSalarios(salarios2))
 
 //solucion reduce
@@ -391,3 +394,4 @@ const sumarSalariosRed = (obj) => {
 }
 
 console.log(sumarSalariosRed(salarios2))
+
