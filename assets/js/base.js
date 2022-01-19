@@ -347,13 +347,14 @@ console.log(averageAgeVoters(persons))
 
 let salarios2 = {
     'jorge': 3000,
-    'juan': 3000,
+    'juan': 5000,
     'Pedro': 3000,
     'Erik': 50
 }
 
 
 //forma de obtener las propiedades de un objeto en forma larga
+//metodo "for-in"
 let empleados = []
 for (item in salarios2){
     empleados.push(item)
@@ -366,7 +367,7 @@ console.log(Object.keys(salarios2))
 //obtener la suma total de los salarios del objeto salarios2
 
 //solucion Arturo
-let totalSuma = Object.keys(salarios2).reduce((acc,key) => acc += salarios2[key],0)
+let totalSuma = Object.keys(salarios2).reduce((acc,NumeroSalario) => acc += salarios2[NumeroSalario],0)
 console.log(totalSuma)
 
 //solucion forEach
@@ -394,4 +395,293 @@ const sumarSalariosRed = (obj) => {
 }
 
 console.log(sumarSalariosRed(salarios2))
+
+//para obtener los valores de una propiedad 
+// Object.value()
+
+console.log(Object.values(salarios2))
+
+
+//obtener la suma de los valores solo conreduce
+
+//declaramos la arrowFunction
+const SalariosReduce = (Redarr) => {
+    //declaramos una variale vacia para guardar el valor total
+    let sumRed = 0
+    //retornamos ese valor y lo igualamos a lo que queremos hacer
+    sumRed = Object.values(Redarr).reduce( (acc,value) => {
+        //obtenemos el valor de la propiedad desde "Object.value(Redarr es el objeto que vamos a ingresar desde la funcion)"
+        //y le aplicamos el metodo Reduce (el acc es el primer valor que recibe, en este caso empieza de 0)
+        // el valor value es el valor de la propiedad, en este caso es el salario de cada uno de los empleados
+        return acc += value
+        //en este return acc += value vamos a estar sumando todos los salarios de cada uno
+        // empezando por (acc)0 + (value)3000 de jorge, para despues en la siguiente iteracion seria esto
+        // (acc)3000 + (value)5000 de juan y asi sucesivamente para sumar todos los valores hasta llegar al resultado final
+    },0 )
+    //despues de la llave, tenemos que poner una "," para indicar en que valor va a empezar el metodo reduce
+    return sumRed
+    //aqui retornamos el valor que obtenemos de todo lo anterior
+}
+
+console.log(SalariosReduce(salarios2))
+
+
+//el tercer metodo de objetos es Object.assing()
+//el cual concatena dos objetos o mas, en este caso 
+//concatenaremos dosobjetos obj1 y obj2 
+let obj1 = {
+    name: 'Erik'
+}
+
+let obj2 = {
+    lastName: 'Gutierrez'
+}
+
+console.log(obj1)
+//el metodo Object.assing(target, ...sources)
+//obtiene las propiedades de un objeto y las concatena con el priemr objeto que ponemos (target)
+Object.assign(obj1,obj2)
+//en este caso quedaria de la siguiente manera
+
+// let obj1 = {
+//     name: 'Erik',
+//     lastName: 'Gutierrez'
+// }
+
+console.log(obj1)
+
+
+//el metodo de objetos = Object.entries(objeto)
+//nos arroja un array de arrays
+//queda de esta forma
+
+// [
+//     ['name','Erik'],
+//     ['lastName','Gutierrez']
+// ]
+
+console.log(Object.entries(obj1))
+
+
+//como lo dice el metodo, se puede utilizar cuando ya no vas a permitir algun cambio en el 
+//antes del metodo podmos hacer lo que queramos con el objeto
+
+//agregamos el valor de generation 
+obj1.generation = 15
+console.log(obj1)
+
+//congalamos o bloqueamos el objeto 
+Object.freeze(obj1)
+
+//tratamos de modificar el valor de generation y lo imprimimos en consola
+obj1.generation = 20
+console.log(obj1)
+
+//en consola sigue apareciendo 15
+
+
+
+//otro tema
+//Destructuracion de arrays
+//tenemos un array 
+let newArray = [10,20,30,40,50]
+
+//estamos asignando un valor a cada letra
+//para luego hacer otras cosas con las variables
+
+// let [a,b,c,d] = newArray
+// console.log(a,b,c,d)
+
+let [a,b, ...rest] = [10,20,30,40,50]
+//podemos imprimir por separado y el resto de un array
+console.log(a)
+console.log(b)
+//siempre se debe de poner los tres puntos antes
+console.log(...rest)
+
+
+//destructuracion de objetos
+
+const hero = {
+    NameHero: 'Batman',
+    RealName: 'Bruce Wayne'
+}
+
+const { NameHero, RealName } = hero
+
+console.log(NameHero)
+console.log(RealName)
+
+//otro ejemplo de la destructuracion de objetos es este
+
+
+let users_2 = [
+    { firstName: 'Bradley', lastName: 'Bouley', role: 'Full Stack Resident' },
+    { firstName: 'Chloe', lastName: 'Alnaji', role: 'Full Stack Resident' },
+    { firstName: 'Jonathan', lastName: 'Baughn', role: 'Enterprise Instructor' },
+    { firstName: 'Michael', lastName: 'Herman', role: 'Lead Instructor' },
+    { firstName: 'Robert', lastName: 'Hajek', role: 'Full Stack Resident' },
+    { firstName: 'Wes', lastName: 'Reid', role: 'Instructor'},
+    { firstName: 'Zach', lastName: 'Klabunde', role: 'Instructor'}
+]
+
+//podemos aplicar el metodo forEach para imprimir todos los objetos en un solo valor
+
+//hacemos la funcion normal
+users_2.forEach((value,index,array)=>{
+    //se puede imprimir todo de la siguiente manera
+    //console.log(value.firstName, value.lastName, value.role)
+    //pero de otra forma mas elegante es la siguiente
+
+//iniciamos una variable de objeto y lo igualamos a value
+    let {firstName, lastName, role} = value
+    console.log(firstName,lastName,role)
+    //no aparecera de la siguiente manera
+    //todo en texto
+
+    //  Bradley Bouley Full Stack Resident
+    //  Chloe Alnaji Full Stack Resident
+    //  Jonathan Baughn Enterprise Instructor
+    //  Michael Herman Lead Instructor
+    //  Robert Hajek Full Stack Resident
+    //  Wes Reid Instructor
+    //  Zach Klabunde Instructor
+})
+
+//un metodo de array Spread operator
+
+//tenemos dos arrays 
+const arr1 = ['one','two']
+const arr2 = ['three',...arr1,'four','five']
+
+//el spread aperator es concatenar un array con otro array
+//una forma de hacerlo es la siguiente
+
+// let arr3 = arr2.concat(arr1)
+// console.log(arr3)
+//['three', 'four', 'five', 'one', 'two']
+
+//la otra forma de hacerlo con spread operator es la siguiente
+
+// const arr1 = ['one','two']
+// const arr2 = ['three','four','five', ...arr1]
+
+//y nos da el mismo resultado
+//['three', 'four', 'five', 'one', 'two']
+
+//la ventaja del spread operator es que lo podemos poner donde uno quiera
+
+// const arr1 = ['one','two']
+// const arr2 = ['three',...arr1,'four','five']
+console.log(arr2)
+
+//y nos da esta resultado
+// ['three', 'one', 'two', 'four', 'five']
+
+//tambien se puede hacer con objetos
+
+// let objSpread = {
+//     propiedad: 'valor'
+// }
+// let objSpread2 = {
+//     propiedad2: 'valor'
+// }
+
+//es la misma situacion que un array solo ay que agregar lo que quermos en donde lo queramos 
+//en este caso queremos meter la propiedad y el valor del primer objeto en el segundo objeto
+
+let objSpread = {
+    propiedad: 'valor',
+    age: 29
+}
+let objSpread2 = {
+    propiedad2: 'valor',
+    ...objSpread
+}
+
+console.log(objSpread2)
+
+//tarea de la clase 11
+/**
+ * Ejercicio 1.
+ * Dado un objeto inicial, hacer los siguientes puntos 
+ * 
+ * 1. Agregar el lenguaje 'Go' a la lista de lenguajes
+ * 2. Cambiar el nivel a 4
+ * 3. Eliminar la propiedad avatar
+ * 4. Agregar una nueva propiedad de edad y poner el valor de 30
+ * 5. Imprimir en consola todos los lenguajes dominados
+ * 6. Clonar el objeto en uno nuevo
+ * 7. Imprimir en consola el nuevo objeto
+ * 
+ * @hint https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+ */
+
+ let koder_home = {
+    languages: ["JavaScript", "Python", "Ruby"],
+    isMentor: true,
+    level: 3,
+    avatar: "https://picsum.photos/200/300"
+}
+
+const changeObj = (obj) => {
+    
+    obj.languages.push('Go')
+    obj.level = 4
+    delete obj.avatar
+    obj.age = 30
+    // console.log(`${obj.languages}`)
+
+    return obj
+}
+
+//copiamos el objeto y si modificamos algo, no alteramos el original
+let newObj = {...koder_home}
+
+
+console.log(changeObj(koder_home))
+console.log(newObj)
+
+
+/**
+ * Ejercicio 2:
+ * Escribir una funcion que reciba un parametro
+ * Verificar si el parametro es un objeto
+ * o si es un array
+ * p.ej.  
+ * ·> isAnObjectOrArray( [1,2,3] )
+ * -> 'Es un array'
+ * ·> isAnObjectOrArray( {key:'value'} )
+ * -> 'Es un Objeto'
+ * ·> isAnObjectOrArray( 'Hola mundo' )
+ * -> 'No es un array ni un objeto'
+ * 
+ * 
+ * @params {Object}, [Array] ,'string' - Estructura que se quiere validar
+ * @return 'String' - mensaje de respuesta
+ * 
+ * @hint https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
+ * @hint https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray
+ * 
+ */
+
+
+//hacemos una funcion para saber si es un array o un objeto
+const isAnObjOrArr = (element) => {
+    //verificamos primero si es un array con un metodo de array si es un array (isArray)
+    //y lo comparamos para ver si el elemento que ingreso es un array, si es true, imprimira que es un array
+    if(Array.isArray(element) === true){
+        console.log('Es un Array')
+        //si no es un array, hace la comparacion de si es un objeto
+        //si es true, imprimira 'Es un objeto'
+    }else if(typeof (element) === 'object'){
+        console.log('Es un Objeto')
+    }else{
+        //Si no es ninguno de los dos anteriores.
+        //Solo imprimira 'No es un array ni un objeto'
+        console.log('No es un array ni un objeto')
+    }
+    //retorna el valor para poderlo imprimir en consola
+    return element
+}
 
