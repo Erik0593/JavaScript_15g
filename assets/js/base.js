@@ -671,17 +671,82 @@ const isAnObjOrArr = (element) => {
     //verificamos primero si es un array con un metodo de array si es un array (isArray)
     //y lo comparamos para ver si el elemento que ingreso es un array, si es true, imprimira que es un array
     if(Array.isArray(element) === true){
-        console.log('Es un Array')
+        return 'Es un Array'
         //si no es un array, hace la comparacion de si es un objeto
         //si es true, imprimira 'Es un objeto'
     }else if(typeof (element) === 'object'){
-        console.log('Es un Objeto')
+        return 'Es un Objeto'
     }else{
         //Si no es ninguno de los dos anteriores.
         //Solo imprimira 'No es un array ni un objeto'
-        console.log('No es un array ni un objeto')
+        return 'No es un array ni un objeto'
     }
     //retorna el valor para poderlo imprimir en consola
     return element
 }
 
+
+
+/**
+ * Ejercicio 3.
+ * Realizar una funcion que tome como parametro un objeto
+ * y devuelva un array de arrays con la siguiente estructura
+ * [ [key, value], [key, value] ]
+ * Resultado esperado: makePairs({ a: 1, b: 2 }) => [['a', 1], ['b', 2]]
+ * 
+ * @params {Object} object - El objeto que queremos transformar
+ * @return [Array] - El array que se espera retornar
+ * 
+ * @hint https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries
+ * @hint https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+ * 
+ * Se tiene que realizar 2 soluciones, 1 con Object.entries() y otra con .map()
+ */
+
+
+
+let fromObject = {
+    a: 1,
+    b: 2
+}
+
+//metodo con .entries
+const Pairs= (obj) => {
+    let toarray =Object.entries(obj)
+    return toarray
+}
+console.log(Pairs(fromObject))
+
+//metodo .map
+//la funcion obtiene un objeto y le aplica el .keys (para obtener la propiedad)
+//despues se le aplica el metodo .map (porque .keys te devuelve un array y ya se le puede aplicar el metodo .map)
+//y de cada iteracion se va a ir agregando la primera propiedad y despues obtenemos el valor de la propiedad
+const makePairs2 = (obj) => Object.keys(obj).map((el) => [el,obj[el]])
+//teniendo como resultado
+//[['a',1],
+// ['b',2]]
+console.log(makePairs2(fromObject))
+
+
+/**
+ * Ejercicio 4:
+ * Realizar una funcion que tome como parametro un string
+ * y retorne un array con todos caracteres del string
+ * 
+ * Resultado esperado: 
+ * ·> splitString('hola mundo')
+ * ·> ['h','o','l','a',' ','m','u','n','d','o']
+ * 
+ * @params 'String' - El String que queremos transformar
+ * @return [Array] - El array que se espera retornar
+ * 
+ * 
+ * @hint https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+ */
+
+
+const splitString = (str) => {
+    return [...str]
+}
+
+console.log(splitString('Hola Mundo'))
