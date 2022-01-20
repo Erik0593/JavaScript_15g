@@ -750,3 +750,47 @@ const splitString = (str) => {
 }
 
 console.log(splitString('Hola Mundo'))
+
+//   ***********   Clase 12   ***************
+
+//nosotros podemos meter una funcion dentro de un objeto
+//en este caso nosotros metemos una funcion para obtener el nombre ocmpleto del koder
+//"this" significa que esta haciendo referencia al mismo objeto
+//pero "this" afuera del objeto sinifica que estas dentro de windows
+//es mejor utilizarlo dentro de un bloque de objeto
+let MetKoder = {
+    Name: 'Erik',
+    Lastname: 'Gutierrez',
+    age: 28,
+    average: [10, 10, 10, 8, 9],
+    //puede ser dentro del objeto
+    // getFullName: function () {
+    //     return `${this.Name} ${this.Lastname}`
+    // }
+
+    //hacemos la funcion de que es lo que vamos hacer o agregar al objeto
+    TotalAverage: function () {
+        //vamos a retornar lo que nos regrese de la siguiente funcion 
+        //la cual dice que vamos  a agregar un reduce por cada elemento del array
+        //para sumar cada elemento del array 
+        return this.average.reduce(( acc, element ) => {
+            return acc += element
+            //terminando el parentesis es cuando regresa la suma de los valores
+        },0) / this.average.length
+        //despues ya que se haya sumado todo, lo vamos a dividir por el total de valores que hay dentro del array
+    }
+}
+
+
+
+//puede ser tambien afuera del objeto y solo lo tenemos que agregarlo al objeto
+
+MetKoder.getFullName = function () {
+    //this es haciendo referencia al mismo objeto
+    console.log(this)
+    return `${ this.Name } ${ this.Lastname}`
+}
+
+console.log(MetKoder.getFullName())
+console.log(MetKoder.TotalAverage())
+
