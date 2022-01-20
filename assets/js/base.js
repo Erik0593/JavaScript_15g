@@ -791,6 +791,25 @@ MetKoder.getFullName = function () {
     return `${ this.Name } ${ this.Lastname}`
 }
 
+MetKoder.Promedio = function () {
+    let promedio = 0
+
+    //aqui se esta obteniendo todos los valores del array
+    promedio = Object.values(this.average)
+    console.log(promedio)
+
+    //aqui se esta aplicando el metodo reduce para sumar todos los valores del array
+    let promedios =promedio.reduce( (acc, element) => {
+        return acc += element
+
+    })
+    console.log(promedios)
+
+    //aqui se esta aplicando la division para sacar el promedio
+    // promedios: 47 / promedio:5 = 9.4
+    return promedios/promedio.length
+}
+
 console.log(MetKoder.getFullName())
 console.log(MetKoder.TotalAverage())
-
+console.log(MetKoder.Promedio())
