@@ -57,8 +57,9 @@ let resultado =
 [11,2,3,10,5].map( (val) => {
     let newVal = val * 2 
     return newVal
+    //el resultado de esto seria [22,4,6,20,10]
 })
-// console.log(resultado)
+console.log(resultado)
 
 const arrMap = [11,2,3,10,5]
 const result = arrMap.map( (val) => {
@@ -813,3 +814,28 @@ MetKoder.Promedio = function () {
 console.log(MetKoder.getFullName())
 console.log(MetKoder.TotalAverage())
 console.log(MetKoder.Promedio())
+
+
+//  *****************    repaso de forEach      *************************
+
+// const ar = [1,2,3,4]
+
+// let numeros = [1, 2, 3, 4,10,11] 
+// let suma = 0
+    
+// const SumTot = ar.forEach ((numero) => suma += numero)
+//     console.log(suma);
+
+// //repaso de forEach
+// const toTaL = (arr) => {
+//     let numero2 = 0
+//     arr.forEach((numero) => {
+//         console.log(numero2,numero)
+//         numero2 += numero
+//     })
+//     return numero2
+// }
+
+// console.log(toTaL(numeros))
+
+
